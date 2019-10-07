@@ -2,7 +2,7 @@
 import express from 'express';
 // @ts-ignore
 import { Builder, Nuxt } from 'nuxt';
-import apiRouter from 'controllers/api';
+import apiRouter from './controllers/api';
 export default class NuxtExpressServer {
     constructor() {
         this.app = express();
