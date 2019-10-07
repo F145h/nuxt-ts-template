@@ -2,6 +2,7 @@
 import express from 'express';
 // @ts-ignore
 import { Builder, Nuxt } from 'nuxt';
+import apiRouter from 'controllers/api';
 export default class NuxtExpressServer {
     constructor() {
         this.app = express();
@@ -19,6 +20,7 @@ export default class NuxtExpressServer {
             const builder = new Builder(nuxt);
             builder.build();
         }
+        this.app.use("/api", apiRouter);
         // Give nuxt middleware to express
         this.app.use(nuxt.render);
         // Listen the server

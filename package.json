@@ -10,7 +10,8 @@
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
     "start": "cross-env NODE_ENV=production node .build/main.js",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "node test.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
@@ -30,6 +31,7 @@
     "fork-ts-checker-webpack-plugin": "^0.4.15",
     "prettier": "1.14.3",
     "ts-loader": "^5.3.0",
+    "tape": "^4.11.0",
     "typescript": "^3.1.6"
   }
 }
