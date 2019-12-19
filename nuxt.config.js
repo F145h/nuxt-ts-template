@@ -5,7 +5,7 @@ module.exports = {
   ** Basic configuration
   */
   mode: 'universal',
-
+  buildModules: 'npm_lifecycle_event' in process.env ? ['@nuxt/typescript-build'] : [],
   srcDir: './',
   extension: ['js', 'ts'],
 
@@ -44,11 +44,7 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
-    '~/modules/typescript',
-  ],
+ modules:  [  '@nuxtjs/axios' ],
   /*
   ** Axios module configuration
   */
@@ -63,6 +59,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    transpile: [/^element-ui/],
     extend(config, ctx) {},
   },
 };

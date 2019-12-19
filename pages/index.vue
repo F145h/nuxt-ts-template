@@ -34,7 +34,7 @@ export default class extends Vue {
 <style lang='stylus'>
 
 .cool-block
-  background-color: #f0f0f0
+  padding: 10px;
 
   .cool-text
     color: darkgreen
