@@ -5,7 +5,7 @@ module.exports = {
   ** Basic configuration
   */
   mode: 'universal',
-  buildModules: 'npm_lifecycle_event' in process.env ? ['@nuxt/typescript-build'] : [],
+  buildModules: ['@nuxt/typescript-build'],
   srcDir: './',
   extension: ['js', 'ts'],
 
